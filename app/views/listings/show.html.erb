@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Beds:</strong>
+  <%= @listing.beds %>
+</p>
+
+<p>
+  <strong>Baths:</strong>
+  <%= @listing.baths %>
+</p>
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>
