@@ -3,10 +3,12 @@
 <h1>Listings</h1>
 <h3>Choose Filter</h3>
 <%= form_tag(listings_path, method: :get) do %>
-  <%= text_field_tag 'query[beds_min]', 'Min Beds' %>
-  <%= text_field_tag 'query[beds_max]', 'Max Beds' %>
-  <%= text_field_tag 'query[baths_min]', "Min Baths" %>
-  <%= text_field_tag 'query[baths_max]', 'Max Baths' %>
+  <%= text_field_tag 'query[beds_min]', nil, placeholder: 'beds min', class: 'form-control' %>
+  <%= text_field_tag 'query[beds_max]', nil, placeholder: 'beds max', class: 'form-control' %>
+  <%= text_field_tag 'query[baths_min]', nil, placeholder: 'baths min', class: 'form-control' %>
+  <%= text_field_tag 'query[baths_max]', nil, placeholder: 'baths max', class: 'form-control' %>
+  <%= text_field_tag 'query[price_min]', nil, placeholder: 'price min', class: 'form-control' %>
+  <%= text_field_tag 'query[price_max]', nil, placeholder: 'price max', class: 'form-control' %>
   <%= submit_tag ('Search') %>
 <% end %>
 
@@ -15,6 +17,7 @@
     <tr>
       <th>Beds</th>
       <th>Baths</th>
+      <th>Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +27,7 @@
       <tr>
         <td><%= listing.beds %></td>
         <td><%= listing.baths %></td>
+        <td><%= listing.price %></td>
         <td><%= link_to 'Show', listing %></td>
         <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
