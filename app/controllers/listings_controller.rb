@@ -22,6 +22,8 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
 
+    @listing.banner = File.open(params[:listing][:banner])
+
     respond_to do |format|
       if @listing.save
         format.html { redirect_to listing_url(@listing), notice: "Listing was successfully created." }

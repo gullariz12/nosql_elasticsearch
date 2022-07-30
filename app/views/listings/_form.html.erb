@@ -11,22 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :beds %>
-    <%= form.number_field :beds, id: :listing_beds %>
+  <div class="row">
+    <div class="col-md-6 form-group field">
+      <%= form.label :banner %>
+      <%= form.file_field :banner, class: 'form-control col-md-6', id: :listing_banner %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :baths %>
-    <%= form.number_field :baths, id: :listing_baths %>
+  <div class="row">
+    <div class="col-md-6 form-group field">
+      <%= form.label :beds %>
+      <%= form.number_field :beds, class: 'form-control col-md-6', id: :listing_beds %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, id: :listing_price %>
+  <div class="row">
+    <div class="col-md-6 form-group field">
+      <%= form.label :baths %>
+      <%= form.number_field :baths, class: 'form-control', id: :listing_baths %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="row">
+    <div class="col-md-6 form-group field">
+      <%= form.label :price %>
+      <%= form.number_field :price, class: 'form-control', id: :listing_price %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mt-3 form-group actions">
+      <%= form.submit%>
+    </div>
   </div>
 <% end %>

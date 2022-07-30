@@ -8,6 +8,8 @@ class Listing
   field :baths, type: Integer
   field :price, type: Integer
 
+  mount_uploader :banner, BannerUploader
+
   index_name 'sample_task'
   document_type self.name.downcase
 

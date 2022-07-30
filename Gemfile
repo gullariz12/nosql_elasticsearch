@@ -26,6 +26,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # Mongoid ODM for MongoDB
 gem 'mongoid', '~> 7.0.5'
 
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
